@@ -15,6 +15,7 @@ GIMP_storage = settings["PathToStorage"]
 GIMP_storage_projects = GIMP_storage + "/Projects"
 GIMP_storage_exports = GIMP_storage + "/Exports"
 GIMP_path = settings["GIMPpath"]
+ItemsPerRow = settings["ItemPerRow"]
 
 def get_xcf_files(folder_path):
     return [item for item in os.listdir(folder_path) if item.endswith(".xcf")]
@@ -43,12 +44,12 @@ def main():
     xcf_files.sort(key=lambda f: get_file_modification_time(f"{GIMP_storage_projects}/{f}"), reverse=True)
     
     root = tk.Tk()
-    root.title("GIMP Save GUI")
+    root.title("GIMP Savefile Organizer")
     root.configure(background="#f0f0f0")
     root.geometry(f"{screen_width}x{screen_height}")
     root.resizable(True, True)
 
-    header_label = tk.Label(root, text="GIMP Save GUI", font=("Arial", 24), bg="#f0f0f0", fg="#333333")
+    header_label = tk.Label(root, text="GIMP Savefile Organizer", font=("Arial", 24), bg="#f0f0f0", fg="#333333")
     header_label.pack(pady=20)
     
     frame = tk.Frame(root, bg="#f0f0f0")
@@ -79,7 +80,7 @@ def main():
     canvas.bind_all("<MouseWheel>", on_mouse_scroll)
     
     for i, file in enumerate(xcf_files):
-        row, col = divmod(i, 4)
+        row, col = divmod(i, ItemsPerRow)
         
         file_frame = tk.Frame(scrollable_frame, bg="#f0f0f0", padx=10, pady=10)
         file_frame.grid(row=row, column=col, padx=20, pady=10)
