@@ -11,9 +11,8 @@ with open("settings.json", 'r') as f:
 
 screen_width = settings["ScreenWidth"]
 screen_height = settings["ScreenHeight"]
-GIMP_storage = settings["PathToStorage"]
-GIMP_storage_projects = GIMP_storage + "/Projects"
-GIMP_storage_exports = GIMP_storage + "/Exports"
+GIMP_storage_projects = settings["PathToProjectStorage"]
+GIMP_storage_exports = settings["PathToImageStorage"]
 GIMP_path = settings["GIMPpath"]
 ItemsPerRow = settings["ItemPerRow"]
 
@@ -102,5 +101,3 @@ def main():
     
     root.mainloop()
 
-if __name__ == "__main__":
-    main()
