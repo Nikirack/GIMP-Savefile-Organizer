@@ -3,3 +3,4 @@
 /dist
 /installer.spec
 /__pycache__
+/settings.json
