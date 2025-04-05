@@ -22,24 +22,22 @@
 ## Installation 🚀
 
 1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/Nikirack/GIMP-Savefile-Organizer.git
-   ```
+```bash
+git clone https://github.com/Nikirack/GIMP-Savefile-Organizer.git
+```
 2. Navigate into the project directory:
-  ```bash
-  cd gimp-savefile-organizer
-  ```
+```bash
+cd gimp-savefile-organizer
+```
 3. Install dependencies:
 You can install the required Python packages via pip:
-
-  ```bash
-  pip install -r requirements.txt
+```bash
+pip install -r requirements.txt
 ```
 4. Run the application:
-
-  ```bash
-  python installer.py
-  ```
+```bash
+python installer.py
+```
 ## Usage 🖱️
 
 After launching the application, you'll be greeted with a screen where you put in your GIMP projects folder, and your exports frolder, then you need to put the path to your GIMP binary (The image-rendering only works if the name of the image is the same as the project).
