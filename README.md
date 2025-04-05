@@ -1,6 +1,7 @@
 # GIMP Savefile Organizer 💾
 
 **GIMP Savefile Organizer** is a tool designed to help you organize your GIMP savefiles, which can often become scattered or difficult to manage. Since GIMP doesn't have a built-in savefile organizer, this tool was created to fill that gap and make your file management smoother.
+![Screenshot of the app](https://github.com/Nikirack/GIMP-Savefile-Organizer/blob/main/public/Skjermbilde%202025-04-05%20111731.png)
 
 ---
 
